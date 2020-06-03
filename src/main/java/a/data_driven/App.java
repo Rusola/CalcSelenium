@@ -1,4 +1,4 @@
-package org.example;
+package a.data_driven;
 
 /**
  * Hello world!

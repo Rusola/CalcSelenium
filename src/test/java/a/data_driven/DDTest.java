@@ -1,4 +1,4 @@
-package org.example;
+package a.data_driven;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
