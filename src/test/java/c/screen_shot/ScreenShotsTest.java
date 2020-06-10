@@ -36,7 +36,9 @@ public class ScreenShotsTest {
 
     @Test
     void test() throws IOException {
-        var screenShotTaker = (TakesScreenshot) driver; // переориентируем на TakesScreenshot интерфейс
-        FileHandler.copy(screenShotTaker.getScreenshotAs(OutputType.FILE), new File("visibleArea.png"));
+        var my_screenShotTaker = (TakesScreenshot) driver; // переориентируем на TakesScreenshot интерфейс
+
+        File file_in_main_memory = my_screenShotTaker.getScreenshotAs(OutputType.FILE); // Сделать скриншот (файл в памяти)
+        FileHandler.copy(file_in_main_memory, new File("visibleArea.png")); // скопировать содержимое из файла памяти в файл на нашем диске
     }
 }
