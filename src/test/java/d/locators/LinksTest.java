@@ -116,7 +116,7 @@ public class LinksTest {
     void homeWork2() throws IOException {
         driver.get("https://www.trademe.co.nz");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS)
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         WebElement searchInput = driver.findElement(By.id("searchString"));
         searchInput.sendKeys("milk");
@@ -138,6 +138,23 @@ public class LinksTest {
 
         // Нажать browser Back
         driver.navigate().back(); // Interface WebDriver.Navigation
+    }
 
+    @Test
+    void homeWork3() {
+        driver.get("https://duckduckgo.com/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+        WebElement search = driver.findElement(By.id("search_form_input_homepage"));
+        search.sendKeys("maven");
+        driver.findElement(By.id("search_button_homepage")).click();
+
+        WebElement searchOnTop = driver.findElement(By.id("search_form_input"));
+        String found_text = searchOnTop.getAttribute("value");
+        assertEquals("maven", found_text);
+
+        List <WebElement> links = driver.findElements(By.linkText("Apache Maven"));
+        System.out.println(links.size());
     }
 }
