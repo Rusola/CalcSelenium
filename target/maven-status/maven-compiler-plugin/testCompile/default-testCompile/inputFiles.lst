@@ -1,1 +1,11 @@
-/Users/Olga/projects/Calc/src/test/java/org/example/DDT.java
+/Users/Olga/projects/Calc/src/test/java/a/data_driven/UnitTestForCalc.java
+/Users/Olga/projects/Calc/src/test/java/b/cross_browser/UsingWDManager1Test.java
+/Users/Olga/projects/Calc/src/test/java/d/locators/LocatorsTest.java
+/Users/Olga/projects/Calc/src/test/java/b/cross_browser/MultiBrowsers2.java
+/Users/Olga/projects/Calc/src/test/java/e/links/LinksTest.java
+/Users/Olga/projects/Calc/src/test/java/a/data_driven/DDTest.java
+/Users/Olga/projects/Calc/src/test/java/f/tabs/SwitchingTabs.java
+/Users/Olga/projects/Calc/src/test/java/c/screen_shot/ScreenShotsTest.java
+/Users/Olga/projects/Calc/src/test/java/b/cross_browser/MultiBrowsers1.java
+/Users/Olga/projects/Calc/src/test/java/b/cross_browser/UsingWDManager2.java
+/Users/Olga/projects/Calc/src/test/java/j/elements/ElementExistAndScrolling.java

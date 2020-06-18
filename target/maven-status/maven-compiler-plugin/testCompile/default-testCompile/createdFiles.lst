@@ -1,2 +1,11 @@
-org/example/SimpleTest.class
-org/example/DDTest.class
+b/cross_browser/MultiBrowsers1.class
+b/cross_browser/UsingWDManager1Test.class
+j/elements/ElementExistAndScrolling.class
+b/cross_browser/UsingWDManager2.class
+a/data_driven/UnitTestForCalc.class
+f/tabs/SwitchingTabs.class
+c/screen_shot/ScreenShotsTest.class
+d/locators/LocatorsTest.class
+a/data_driven/DDTest.class
+b/cross_browser/MultiBrowsers2.class
+e/links/LinksTest.class

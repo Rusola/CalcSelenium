@@ -41,4 +41,5 @@ public class ScreenShotsTest {
         File file_in_main_memory = my_screenShotTaker.getScreenshotAs(OutputType.FILE); // Сделать скриншот (файл в памяти)
         FileHandler.copy(file_in_main_memory, new File("visibleArea.png")); // скопировать содержимое из файла памяти в файл на нашем диске
     }
+    /** есть библиотека для проскроливания страницы и делания скриншоты по всей длинне Ashot */
 }

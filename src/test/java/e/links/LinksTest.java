@@ -1,4 +1,4 @@
-package d.locators;
+package e.links;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -124,7 +124,6 @@ public class LinksTest {
 
         searchBtn.click();
 
-
         WebElement result = driver.findElement(By.className("search-results-text"));
         String found_text = result.getText();
 
@@ -154,7 +153,8 @@ public class LinksTest {
         String found_text = searchOnTop.getAttribute("value");
         assertEquals("maven", found_text);
 
+        // Verify that link exists
         List <WebElement> links = driver.findElements(By.linkText("Apache Maven"));
-        System.out.println(links.size());
+        assertTrue(links.size() != 0);
     }
 }

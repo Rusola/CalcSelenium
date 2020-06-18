@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.example.DDTest
--------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.228 s <<< FAILURE! - in org.example.DDTest
-test2{int, String, String}  Time elapsed: 0.131 s  <<< ERROR!
-org.junit.platform.commons.PreconditionViolationException: Classpath resource [myData.csv] does not exist
-
