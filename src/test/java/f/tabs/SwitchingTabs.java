@@ -65,7 +65,7 @@ public class SwitchingTabs {
 
         // Go back to the 1st window
         driver.switchTo().window(firstTabHandle);
-        driver.close(); // не завершает браузер уничтожает driver object
+        driver.close(); // закрывает таб, но не завершает браузер, не уничтожает driver object
         driver.switchTo().window(secondTabHandle); // хоть и закрыли первое окно, надо еще и перевести driver чтобы работать с оставшимся вторым
         assertEquals(secondTabTitle, driver.getTitle());
 

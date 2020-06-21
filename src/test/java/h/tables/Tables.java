@@ -69,13 +69,13 @@ public class Tables {
 
     @Test
     void testWithArray(){
-        List<String> expected = new ArrayList<String>(); // пустой объект
+        //List<String> expected = new ArrayList<String>(); // пустой объект интерфейса List
         String[] data = {"$50.00", "$51.00", "$100.00", "$50.00"}; // фиксированный массиив
-        expected = Arrays.asList(data);
+        //expected = Arrays.asList(data); // wrap an existing array just to have access to List methods(ex:get()), except those that would change the size
 
         List<WebElement> columns = driver.findElements(By.cssSelector("#table2 tr>td:nth-child(4)"));
-        for(int i = 0; i < expected.size(); i ++){
-            assertEquals(expected.get(i), columns.get(i).getText());
+        for(int i = 0; i < data.length; i ++){
+            assertEquals(data[i], columns.get(i).getText());
         }
     }
 }
