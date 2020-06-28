@@ -1,6 +1,6 @@
 package l.page_object;
 
-/* 1. Readability 2. Maintenance when selector is changed */
+/* 1. Readability 2. Maintenance when selector is changed 3. Reducing code duplication*/
 
 import comon.Base;
 import org.openqa.selenium.WebDriver;
@@ -37,7 +37,7 @@ public class LoginPage extends Base {
     public static LoginPage open(WebDriver driver){
         driver.get(URL);
         assertEquals(title, driver.getTitle());
-        return PageFactory.initElements(driver, LoginPage.class); // proxy object
+        return PageFactory.initElements(driver, LoginPage.class); // proxy object, здесь впервые вызывается LoginPage constructor
     }
 
     public void submitLogin(String user, String pass){
@@ -46,12 +46,12 @@ public class LoginPage extends Base {
         clickElement(login_button_elem);
     }
     public HomePage validLogin(String user, String pass){
-        submitLogin(user, pass); // должна открыться home page
-        return PageFactory.initElements(driver, HomePage.class);
+        submitLogin(user, pass);
+        return PageFactory.initElements(driver, HomePage.class);  // должна открыться home page
     }
 
     public LoginPage invalidLogin(String user, String pass){
-        submitLogin(user, pass)
+        submitLogin(user, pass);
         return this;  // вернется созданный в open методе LoginPage obj
     }
     

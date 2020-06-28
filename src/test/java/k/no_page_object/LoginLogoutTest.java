@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertTrue;
 
-public class LoginLogout extends Base {
+public class LoginLogoutTest extends Base {
 //    private WebDriver driver; т к в родителе
 
     @BeforeEach
