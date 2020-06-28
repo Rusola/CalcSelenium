@@ -28,35 +28,43 @@ public class LoginPage extends Base {
     @FindBy(id = "flash")
     private WebElement confirm_logout_msg_elem;
 
+    @FindBy(id = "flash-messages")
+    private WebElement error_msg_elem;
+
     // II. Constructor.
-    public LoginPage(WebDriver driver){
+    public LoginPage(WebDriver driver) {
         this.driver = driver; // this.driver <= доступен из Base
     }
 
     // III. Methods. (Services/ Actions)
-    public static LoginPage open(WebDriver driver){
+    public static LoginPage open(WebDriver driver) {
         driver.get(URL);
         assertEquals(title, driver.getTitle());
         return PageFactory.initElements(driver, LoginPage.class); // proxy object, здесь впервые вызывается LoginPage constructor
     }
 
-    public void submitLogin(String user, String pass){
+    public void submitLogin(String user, String pass) {
         username_elem.sendKeys(user);
         password_elem.sendKeys(pass);
         clickElement(login_button_elem);
     }
-    public HomePage validLogin(String user, String pass){
+
+    public HomePage validLogin(String user, String pass) {
         submitLogin(user, pass);
         return PageFactory.initElements(driver, HomePage.class);  // должна открыться home page
     }
 
-    public LoginPage invalidLogin(String user, String pass){
+    public LoginPage invalidLogin(String user, String pass) {
         submitLogin(user, pass);
         return this;  // вернется созданный в open методе LoginPage obj
     }
-    
-    public String getLogoutConfirmation(){
+
+    public String getLogoutConfirmation() {
         return confirm_logout_msg_elem.getText();
+    }
+
+    public String getErrorMessage() {
+        return error_msg_elem.getText();
     }
 
 }

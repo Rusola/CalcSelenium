@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 public class DDTest {
     @ParameterizedTest(name = "print palindrome")
-    @ValueSource (strings = {"racecar", "radar", "madam"}) // откуда берутся данные, если не используем файл, то такая аанотация ValueSource с типов данных внутри. ТЕст будет знать что надо брать по-одному
+    @ValueSource (strings = {"racecar", "radar", "madam"}) // откуда берутся данные, если не используем файл, то такая аанотация ValueSource с типами данных внутри. Тест будет знать что надо брать по-одному
     void test(String word){
         System.out.println(word);
     }

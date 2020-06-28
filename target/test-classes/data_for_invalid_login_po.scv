@@ -1,0 +1,6 @@
+USERNAME, PASSWORD, EXPEXTED_MSG
+"tomsmithh", "SuperSecretPassword!", "Your username is invalid!"
+"tomsmith", "SuperSecretPassword", "Your password is invalid!"
+"", "", "Your username is invalid!"
+"123", "9->", "Your username is invalid!"
+"tomsmithh", "superSecretPassword!", "Your username is invalid!"

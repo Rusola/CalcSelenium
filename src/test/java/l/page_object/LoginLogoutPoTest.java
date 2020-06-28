@@ -5,9 +5,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.nio.file.LinkOption;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class LoginLogoutPoTest {
@@ -41,8 +46,13 @@ public class LoginLogoutPoTest {
         assertTrue(found_msg_2.contains("You logged out"));
     }
 
-    @Test
-    void invalidLogin(){
-
+    @ParameterizedTest
+    @CsvFileSource(resources = "/data_for_invalid_login_po.scv", numLinesToSkip = 1)
+    void invalidLoginTest(String username_from_file, String password_from_file, String expected){
+        LoginPage login_page = LoginPage.open(driver)
+                .invalidLogin(username_from_file, password_from_file);
+        String found_error = login_page.getErrorMessage().split("\n")[0];
+        System.out.printf("USERNAME:%s, PASSWORD:%s", username_from_file, password_from_file);
+        assertEquals(expected, found_error);
     }
 }
