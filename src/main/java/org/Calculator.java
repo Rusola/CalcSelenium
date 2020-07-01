@@ -1,5 +1,5 @@
 package org;
-
+/*1) Поставить курсор на имя класса( это важно) и потом нажать alt+Enter or 2) Shift+COMMAND+T*/
 public class Calculator {
 
     private int value;
