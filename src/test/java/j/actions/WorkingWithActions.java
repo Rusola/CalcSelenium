@@ -76,6 +76,8 @@ public class WorkingWithActions {
         assertEquals(current_y + 67, y_after_dragging);
     }
 
+    /* Workaround for drag & drop https://gist.github.com/rcorreia/2362544 */
+
     @Test
     void wh2_drag_and_drop() throws IOException {
 

@@ -46,7 +46,7 @@ public class LoginLogoutPoTest {
         assertTrue(found_msg_2.contains("You logged out"));
     }
 
-    // data_driven
+    // data_driven, dependency junit-jupiter-params
     @ParameterizedTest
     @CsvFileSource(resources = "/data_for_invalid_login_po.scv", numLinesToSkip = 1)
     void invalidLoginTest(String username_from_file, String password_from_file, String expected){
