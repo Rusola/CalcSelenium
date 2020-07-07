@@ -85,29 +85,41 @@ public class WorkingWithActions {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-//        JavascriptExecutor jse = (JavascriptExecutor) driver;
-//        jse.executeScript("window.scroll(0, 5000)");
+        // As regular actions do not work on this page-> use jQuery workaround
 
-        WebElement draggable = driver.findElement(By.id("sourceImage"));
-        WebElement target_square = driver.findElement(By.id("targetDiv"));
-        int height = target_square.getRect().height;
-        int y_square = target_square.getRect().getY();
-        int x_square = target_square.getRect().getX();
+        var file_path = new File("src/test/resources/drag_and_drop_helper.js"); // Creates a new File instance by converting the given pathname string into an abstract(system-independent) pathname
+        Scanner scanned_file = new Scanner(file_path); // parse, breaks into tokens using a delimiter pattern (default: whitespace)
 
-        System.out.println(height);
 
-        int draggable_x = draggable.getLocation().getX();
-        int draggable_y = draggable.getLocation().getY();
+        String java_script = "";
+        while(scanned_file.hasNextLine()){
+            java_script += scanned_file.nextLine(); // перетащим содержимое js файла в этот тест
+        }
 
-        int target_x = target_square.getLocation().getX();
-        int target_y = target_square.getLocation().getY();
+        java_script += "$('#sourceImage').simulateDragDrop({dropTarget: '#targetDiv'});"; // доложим свои значения локаторов и вызовем функцию
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript( java_script);
 
-        Actions builder = new Actions(driver);
-//        builder.dragAndDrop(draggable, target_square).perform();
-        builder.dragAndDropBy(draggable, draggable_x + 300, draggable_y - 300).perform();
+//        WebElement draggable = driver.findElement(By.id("sourceImage"));
+//        WebElement target_square = driver.findElement(By.id("targetDiv"));
+//        int height = target_square.getRect().height;
+//        int y_square = target_square.getRect().getY();
+//        int x_square = target_square.getRect().getX();
 //
-//        builder.clickAndHold(draggable).moveToElement(target_square).click().perform();
-//        builder.moveToElement(draggable, target_square).perform();
+//        System.out.println(height);
+//
+//        int draggable_x = draggable.getLocation().getX();
+//        int draggable_y = draggable.getLocation().getY();
+//
+//        int target_x = target_square.getLocation().getX();
+//        int target_y = target_square.getLocation().getY();
+//
+//        Actions builder = new Actions(driver);
+////        builder.dragAndDrop(draggable, target_square).perform();
+//        builder.dragAndDropBy(draggable, draggable_x + 300, draggable_y - 300).perform();
+////
+////        builder.clickAndHold(draggable).moveToElement(target_square).click().perform();
+////        builder.moveToElement(draggable, target_square).perform();
 
     }
 }
