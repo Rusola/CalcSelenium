@@ -1,5 +1,7 @@
 package l.page_object;
 
+// этот класс используется для демонстрации того то не инициализированные fields дадут ошибку при вызове метода (main)
+
 public class JavaInit {
     private String vb; // not initialized
     private Integer i; // String (or any object) has default value null

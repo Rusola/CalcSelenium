@@ -36,7 +36,7 @@ public class LoginLogoutPoTest {
 
     @Test
     void validLoginLogout() {
-        HomePage home_page = LoginPage.open(driver) // 06/24 можно и через создание объекта
+        HomePage home_page = LoginPage.open(driver) // 06.24.2020 можно и через создание объекта
                 .validLogin("tomsmith", "SuperSecretPassword!");
         String found_mwg = home_page.getLoginConfirmation(); // теперь надо проверить правда ли мы на правтльной странице теперь
         assertTrue(found_mwg.contains("You logged into"));
