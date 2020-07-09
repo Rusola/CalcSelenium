@@ -1,4 +1,4 @@
-# CalcSelenium #:shipit:
+# CalcSelenium :mushroom:
 unit test for calculator and start selenium
 # JAVA on MAC
 ```
