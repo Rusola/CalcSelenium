@@ -2,10 +2,9 @@
 unit test for calculator and selenium end2end tests
 # JAVA on MAC
 ``` java --version ```
-```
-which java > (/usr/bin/java)
-cd /usr/bin > (сам executable java в bin)
-cd ~/Library/Java/JavaVirtualMachines > (see какие программы JDK установилены)
+``` which java ``` (/usr/bin/java)
+``` cd /usr/bin ``` (сам executable java в bin)
+``` cd ~/Library/Java/JavaVirtualMachines ``` (see какие программы JDK установилены)
 ```
 скачаиваю jdk [here](https://adoptopenjdk.net/releases.html?variant=openjdk13&jvmVariant=hotspot)
 ```
