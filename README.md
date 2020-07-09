@@ -1,4 +1,4 @@
-# CalcSelenium :EMOJICODE:
+# CalcSelenium :shipit:
 unit test for calculator and start selenium
 # JAVA on MAC
 ```
