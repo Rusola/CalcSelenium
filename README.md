@@ -1,5 +1,5 @@
-# CalcSelenium :mushroom:
-unit test for calculator and start selenium
+# Selenium :mushroom:
+unit test for calculator and selenium end2end tests
 # JAVA on MAC
 ```
 java --version
