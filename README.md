@@ -14,11 +14,14 @@ cd ~/Library/Java/JavaVirtualMachines > (see какие программы JDK �
 cd ~/Users/olgaross/Downloads
 ```
 ```
-sudo mv ``` /Users/olgaross/Downloads/OpenJDK13U-jre_x64_mac_hotspot_13.0.2_8.tar.gz /Library/Java/JavaVirtualMachines
+sudo mv
+``` /Users/olgaross/Downloads/OpenJDK13U-jre_x64_mac_hotspot_13.0.2_8.tar.gz /Library/Java/JavaVirtualMachines
 ```
-Password:**** ```
+Password:****
 ```
-cd ~/Library/Java/JavaVirtualMachines ``` (see какие программы JDK установилены)
 ```
-sudo rm -rf ``` if old jdk)
+cd ~/Library/Java/JavaVirtualMachines
+``` (see какие программы JDK установилены)
 ```
+sudo rm -rf 
+``` if old jdk)
