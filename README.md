@@ -5,13 +5,13 @@ unit test for calculator and selenium end2end tests
 java --version
 ```
 ```
-which java *обычно в /usr/bin/java*
+which java обычно в /usr/bin/java*
 ```
 ``` 
-cd /usr/bin *сам executable java в bin*
+cd /usr/bin сам executable java в bin*
 ``` 
 ```
-cd ~/Library/Java/JavaVirtualMachines *see какие программы JDK установилены*
+cd ~/Library/Java/JavaVirtualMachines see какие программы JDK установилены
 ```
 ```
 скачаиваю jdk [here](https://adoptopenjdk.net/releases.html?variant=openjdk13&jvmVariant=hotspot)
@@ -24,7 +24,7 @@ sudo mv /Users/olgaross/Downloads/OpenJDK13U-jre_x64_mac_hotspot_13.0.2_8.tar.gz
 ```
 Password:****
 
-cd ~/Library/Java/JavaVirtualMachines *see какие программы JDK установилены*
+cd ~/Library/Java/JavaVirtualMachines  *see какие программы JDK установилены*
 
 sudo rm -rf  *if old jdk*
 
