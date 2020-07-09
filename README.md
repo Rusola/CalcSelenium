@@ -1,12 +1,21 @@
 # Selenium :mushroom:
 unit test for calculator and selenium end2end tests
 # JAVA on MAC
-``` java --version ```
-``` which java ``` (/usr/bin/java)
-``` cd /usr/bin ``` (сам executable java в bin)
-``` cd ~/Library/Java/JavaVirtualMachines ``` (see какие программы JDK установилены)
+```
+java --version
+```
+```
+which java (/usr/bin/java)
+```
+``` 
+cd /usr/bin (сам executable java в bin)
+``` 
+```
+cd ~/Library/Java/JavaVirtualMachines (see какие программы JDK установилены)
+```
 ```
 скачаиваю jdk [here](https://adoptopenjdk.net/releases.html?variant=openjdk13&jvmVariant=hotspot)
+```
 ```
 cd ~/Users/olgaross/Downloads
 ```
@@ -18,6 +27,5 @@ Password:****
 ```
 cd ~/Library/Java/JavaVirtualMachines (see какие программы JDK установилены)
 ```
-```
 sudo rm -rf  if old jdk
-```
+
