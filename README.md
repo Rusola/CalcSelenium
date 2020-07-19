@@ -8,7 +8,7 @@ java --version
 which java обычно в /usr/bin/java*
 ```
 ``` 
-cd /usr/bin сам executable java в bin*
+cd /usr/bin  сам executable java в bin*
 ``` 
 ```
 cd ~/Library/Java/JavaVirtualMachines see какие программы JDK установилены
