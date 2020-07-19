@@ -28,3 +28,4 @@ cd ~/Library/Java/JavaVirtualMachines  *see какие программы JDK у
 
 sudo rm -rf  *if old jdk*
 
+mvn -v Maven показывает и где он саи и где JDK
