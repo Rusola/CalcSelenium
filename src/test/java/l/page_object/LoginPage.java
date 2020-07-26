@@ -5,6 +5,7 @@ package l.page_object;
 import comon.Base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,9 +18,11 @@ public class LoginPage extends Base {
 
     // I. Elements. // только тут поменяем есди изменится локатор
     @FindBy(id = "username") // DOM locator
+    @CacheLookup
     private WebElement username_elem; // variable
 
     @FindBy(id = "password")
+    @CacheLookup
     private WebElement password_elem;
 
     @FindBy(tagName = "button")

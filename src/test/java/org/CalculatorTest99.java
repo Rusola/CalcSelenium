@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/*Shift+COMMAND+T*/
+/*Shift+COMMAND+T или правой кнопкой на имя класса*/
 
 class CalculatorTest99 {
 

@@ -11,6 +11,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.PageFactory;
 
@@ -20,6 +21,7 @@ import static org.junit.Assert.assertTrue;
 public class ClassWithLog {
 
     private WebDriver driver;
+    private ChromeOptions options;
 
     @BeforeAll
     static void setupBeforeAll() throws Exception{
@@ -29,16 +31,19 @@ public class ClassWithLog {
 
     @BeforeEach
     void setUp() throws  Exception{
-        driver = new ChromeDriver();
+        options = new ChromeOptions();
+        options.addArguments("user-agent=\"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1\"");
+
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
     }
 
-    @AfterEach
+    //@AfterEach
     void tearDown() throws Exception{
         driver.quit();
     }
 
-    @Test
+    //@Test
     void testWithoutCacheLookup() {
 
         // засечь врем до
@@ -51,7 +56,7 @@ public class ClassWithLog {
     }
 
     @Test
-    void testWithCacheLookup() {
+     void testWithCacheLookup() {
         HomePage home_page = LoginPage.open(driver)
                 .validLogin("tomsmith", "SuperSecretPassword!");; // зделаем любые действия где есть findElement под копотом
     }
