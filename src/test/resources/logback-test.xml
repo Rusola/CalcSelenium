@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--If we use Logback, which is used by default in Spring Boot, we can set the log level in the logback-test.xml file within src/test/resources-->
+<configuration>
+    <statusListener
+            class="ch.qos.logback.core.NotStatusListener"/>
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <layout name="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd hh:mm:ss} %-5level %logger{36} - %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+    <root level="error">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

@@ -46,7 +46,7 @@ public class ClassWithLog {
     //@Test
     void testWithoutCacheLookup() {
 
-        // засечь врем до
+        // засечь врем до. Важно проследить что страница не берется из кеша ( 
         System.out.println(Math.random());
      
         HomePage home_page = LoginPage.open(driver)
