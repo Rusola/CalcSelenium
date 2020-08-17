@@ -42,10 +42,10 @@ public class GetSpring5Test {
                 .accept(MediaType.APPLICATION_JSON) // Set the list of acceptable media types, as specified by the Accept header
                 .exchange() // Perform the HTTP request!!! RETURNS a ClientResponse interface with the response status and headers. You can then use methods of the response to consume the body
                 .expectStatus()// проверить КОД который вернулся (это метод из Interface WebTestClient.ResponseSpec returns Class StatusAssertions)
-        .is2xxSuccessful()// in the 2xx range или конкретно isOk()= 200
-        .expectHeader().contentType(MediaType.APPLICATION_JSON)
+                .is2xxSuccessful()// in the 2xx range или конкретно isOk()= 200
+                .expectHeader().contentType(MediaType.APPLICATION_JSON)
                 .expectBody(String.class) // Then you specify how to decode (and consume later) the response body
-        .returnResult();
+                .returnResult();
 
         // Берем только body(не весь response). result это String можно и его весь распечатать
         String body = result.getResponseBody();
