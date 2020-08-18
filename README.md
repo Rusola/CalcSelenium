@@ -11,7 +11,7 @@ which java обычно в /usr/bin/java
 cd /usr/bin  сам executable java в bin
 ``` 
 ```
-cd ~/Library/Java/JavaVirtualMachines see какие программы JDK установилены
+cd ~/Library/Java/JavaVirtualMachines see какие программы JDK установлены
 ```
 ```
 скачаиваю jdk [here](https://adoptopenjdk.net/releases.html?variant=openjdk13&jvmVariant=hotspot)
@@ -24,7 +24,7 @@ sudo mv /Users/olgaross/Downloads/OpenJDK13U-jre_x64_mac_hotspot_13.0.2_8.tar.gz
 ```
 Password:****
 
-cd ~/Library/Java/JavaVirtualMachines  *see какие программы JDK установилены*
+cd ~/Library/Java/JavaVirtualMachines  *see какие программы JDK установлены
 
 sudo rm -rf  *if old jdk*
 
