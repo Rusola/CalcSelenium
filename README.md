@@ -14,7 +14,7 @@ cd /usr/bin  сам executable java в bin
 cd ~/Library/Java/JavaVirtualMachines see какие программы JDK установлены
 ```
 ```
-скачаиваю jdk [here](https://adoptopenjdk.net/releases.html?variant=openjdk13&jvmVariant=hotspot/) [link to Google!](http://google.com)
+скачаиваю jdk https://adoptopenjdk.net/releases.html?variant=openjdk13&jvmVariant=hotspot/
 ```
 ```
 cd ~/Users/olgaross/Downloads
